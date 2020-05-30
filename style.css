@@ -70,7 +70,12 @@ font-weight: bold;
 .btn-primary{
     width: 100% !important;
     background-color: red !important;
-
+}
+ .btn:hover{
+    color:#000000;
+    background: #f02d2d;
+    box-shadow:  0 0 10px #e22b2b,0 0 40px #f02d2d, 0 0 80px #f02d2d;
+    transition-delay: 2;
 }
 .heading{
     text-align: center;
@@ -150,15 +155,31 @@ hr{
 	width: 100%;
 	margin-top: 20px;
 }
-.buy:hover{
-	background-color:rgb(216, 138, 138);
-	color: #fff;
+ .buy:hover{
+    color:#000000;
+    background: #f02d2d;
+    box-shadow:  0 0 10px #e22b2b,0 0 40px #f02d2d, 0 0 80px #f02d2d;
+    transition-delay: 2;
+} 
+
+
+.nav-item::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background:rgba(0, 0, 0, 0.753);
+    transition: width .3s;
+} 
+.nav-item{
+    text-transform: uppercase;
 }
-.nav-item:hover{
-    background-color:rgb(65, 55, 55);
-    color:white;
-    text
+.nav-item:hover::after{
+    width: 100%;
+    transition: width .3s;
 }
+
+
 .dropdown-item:hover{
 background-color:red;
     }
@@ -274,7 +295,79 @@ b{
 	color:white;
 	font-weight: 500px;
 }
+.scrollToTop {
+    background: rgba(151, 92, 92, 0.596);
+    bottom: 15px;
+    display: none;
+    height: 60px;
+    padding: 2px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+    }
 
+    /* login form */
+    /* body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #34495e;
+      }  */
+      .box{
+        width: 300px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+      }
+      .box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .box input[type = "text"],.box input[type = "password"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid rgb(153, 13, 13);
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+      .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+        width: 280px;
+        border-color: rgb(85, 36, 36);
+      }
+     
+      .box input[type = "submit"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid rgb(85, 36, 36);
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+      .box input[type = "submit"]:hover{
+        background:red;
+      }
+      
+    
 
 
 
